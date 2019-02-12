@@ -29,6 +29,7 @@ group("simple") {
   foreach(driver, simple_drivers) {
     deps += [ ":simple.$driver" ]
   }
+  deps += [ ":simple-platform" ]
 }
 
 foreach(driver, simple_drivers) {
@@ -44,4 +45,23 @@ foreach(driver, simple_drivers) {
       "$zx/system/ulib/ddk",
     ]
   }
+}
+
+config("simple-platform-config") {
+  include_dirs = [
+    "include",
+  ]
+}
+
+driver("simple-platform") {
+  public_configs = [ ":simple-platform-config" ]
+  sources = [
+    "simple-platform.cpp",
+  ]
+  deps = [
+    ":shared",
+    "$zx/system/banjo/ddk-protocol-display-controller",
+    "$zx/system/ulib/ddk",
+    "$zx/system/ulib/ddktl",
+  ]
 }
