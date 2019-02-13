@@ -1,0 +1,20 @@
+# Copyright 2019 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+driver("sargo") {
+  sources = [
+    "sargo-devices.c",
+    "sargo.c",
+    "sargo.h",
+  ]
+  deps = [
+    "$zx/system/banjo/ddk-protocol-platform-bus",
+    "$zx/system/dev/display/simple:simple-platform",
+    "$zx/system/ulib/ddk",
+    "$zx/system/ulib/ddktl",
+  ]
+  data_deps = [
+    "$zx/kernel/target/arm64/boot-shim:sargo",
+  ]
+}

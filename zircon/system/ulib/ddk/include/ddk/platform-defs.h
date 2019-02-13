@@ -71,6 +71,7 @@ __BEGIN_CDECLS
 #define PDEV_PID_CLEO               6
 #define PDEV_PID_EAGLE              7
 #define PDEV_PID_VISALIA            8
+#define PDEV_PID_SARGO         3333
 
 #define PDEV_DID_GAUSS_AUDIO_IN     1
 #define PDEV_DID_GAUSS_AUDIO_OUT    2

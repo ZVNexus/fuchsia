@@ -14,6 +14,7 @@ group("board") {
     deps += [
       "as370",
       "astro",
+      "sargo",
       "gauss",
       "hikey960",
       "msm8x53-som",
