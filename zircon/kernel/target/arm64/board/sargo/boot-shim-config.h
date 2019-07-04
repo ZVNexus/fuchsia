@@ -46,7 +46,7 @@ static const zbi_mem_range_t mem_config[] = {
     {
         // qseecom_mem: qseecom_region@0x8ab00000
         .type = ZBI_MEM_RANGE_RESERVED,
-        .paddr = 0x8ab00000,
+        .paddr = 0x9e400000,
         .length = 0x1400000,
     },
     // omitted: pil/fw regions (there's no support for loading firmware yet)
